@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.quickwallet_ui">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/circlecropped"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LoginPage">
+        <activity android:name="com.example.quickwallet_ui.Registeration"></activity>
+        <activity android:name="com.example.quickwallet_ui.Services" />
+        <activity android:name="com.example.quickwallet_ui.Recharge" />
+        <activity android:name="com.example.quickwallet_ui.Money_Transfer" />
+        <activity android:name="com.example.quickwallet_ui.Bill_Payments" />
+        <activity android:name="com.example.quickwallet_ui.Profile" />
+        <activity android:name="com.example.quickwallet_ui.Payments" />
+        <activity android:name="com.example.quickwallet_ui.Wallet" />
+        <activity android:name="com.example.quickwallet_ui.Dashboard" />
+        <activity android:name="com.example.quickwallet_ui.splashScreen" />
+        <activity android:name="com.example.quickwallet_ui.MainActivity" />
+        <activity android:name="com.example.quickwallet_ui.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
