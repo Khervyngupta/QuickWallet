@@ -5,28 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Money_Transfer"
-    android:background="@drawable/backg"
-    android:textColor="@color/white"
     >
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/editText2"
-        android:layout_width="380dp"
-        android:layout_height="66dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:text="MONEY TRANSFER"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.035" />
 
     <TextView
         android:id="@+id/editText3"
@@ -36,16 +41,16 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="     Wallet To Wallet"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:textSize="34sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.267" />
+        app:layout_constraintVertical_bias="0.214" />
 
     <EditText
         android:id="@+id/mt_number"
@@ -54,8 +59,8 @@
         android:ems="10"
         android:inputType="number"
         android:hint="Mobile Number"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.577"
@@ -70,8 +75,8 @@
         android:ems="10"
         android:inputType="number"
         android:hint="Amount"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.577"
@@ -108,7 +113,7 @@
         android:layout_height="wrap_content"
         android:text="Pay"
         android:textStyle="bold"
-        android:background="@drawable/round_bg_white"
+        android:background="@drawable/dashboard_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.467"
@@ -118,15 +123,16 @@
 
     <ImageView
         android:id="@+id/Back_Button"
-        android:layout_width="68dp"
-        android:layout_height="73dp"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
         android:src="@drawable/arrow_back_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.036" />
+
 
     <EditText
         android:id="@+id/mt_password"
@@ -135,8 +141,8 @@
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.577"

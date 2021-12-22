@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 public class Registeration extends AppCompatActivity implements View.OnClickListener {
 
-
     DBHelper myDB;
     String msg;
     Button Register;
@@ -75,8 +74,6 @@ public class Registeration extends AppCompatActivity implements View.OnClickList
             }
         });
     }
-
-
     @Override
     public void onClick(View v) {
 

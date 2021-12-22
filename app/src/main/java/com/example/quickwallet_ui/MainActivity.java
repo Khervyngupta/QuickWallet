@@ -1,7 +1,5 @@
 package com.example.quickwallet_ui;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +14,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button login;
     TextView register;
     DBHelper myDB;
+    static String UserNameS;
+    static int total=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         myDB= new DBHelper(this);
 
         register=findViewById(R.id.tv_register);
-
-
         login.setOnClickListener(this);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View v) {
                 String user=username.getText().toString();
                 String pass=password.getText().toString();
-
                 if(user.equals("") || pass.equals("")){
                     Toast.makeText(MainActivity.this,"Please enter the credentials.",Toast.LENGTH_SHORT).show();
                 }
@@ -50,15 +47,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                    if(result==true){
 
                        openDashboard();
+                       UserNameS=user;
                    }
                    else{
                        Toast.makeText(MainActivity.this,"Invalid credentials",Toast.LENGTH_SHORT).show();
                    }
                 }
-
             }
         });
-
         }
     public void openDashboard(){
         Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_SHORT).show();
@@ -69,10 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent(this, Registeration.class);
         startActivity(intent);
     }
-
-
     @Override
     public void onClick(View v) {
-
     }
 }

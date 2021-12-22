@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <View
         android:id="@+id/topView"
         android:layout_width="0dp"
@@ -41,7 +40,7 @@
         android:layout_width="248dp"
         android:layout_height="76dp"
         android:text="Registration Form"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -137,23 +136,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/new_password_register" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/edtpwd_registeration"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="32dp"-->
-<!--        android:layout_marginTop="244dp"-->
-<!--        android:layout_marginEnd="32dp"-->
-<!--        android:background="@drawable/round_border"-->
-<!--        android:drawableStart="@drawable/smartphone_registeration"-->
-<!--        android:ems="10"-->
-<!--        android:hint="   Mobile Number"-->
-<!--        android:inputType="number"-->
-<!--        android:padding="16dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />-->
 
     <EditText
         android:id="@+id/edtpwd_registeration"

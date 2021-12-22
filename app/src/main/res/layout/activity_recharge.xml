@@ -4,8 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/backg">
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -20,14 +28,14 @@
         app:layout_constraintVertical_bias="0.842" />
 
     <EditText
-        android:id="@+id/edt_amount"
+        android:id="@+id/RAmu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Amount"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:inputType="number"
-        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.746"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -42,7 +50,7 @@
         android:layout_below="@+id/textView3"
         android:layout_centerInParent="true"
         android:text="Operator"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +60,52 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.404" />
+        app:layout_constraintVertical_bias="0.414" />
+
+    <ImageView
+        android:id="@+id/recharge_back_btn"
+        android:layout_width="75dp"
+        android:layout_height="44dp"
+        android:src="@drawable/arrow_back_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="64dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="serif"
+        android:text="RECHARGE"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerInParent="true"
+        android:text="Mobile"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -72,78 +125,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Prepaid"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="25sp" />
 
         <RadioButton
             android:id="@+id/radio_two"
-            android:layout_width="152dp"
-            android:layout_height="53dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Postpaid"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="25sp" />
 
     </RadioGroup>
-
-    <ImageView
-        android:id="@+id/recharge_back_btn"
-        android:layout_width="61dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/arrow_back_white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="300dp"
-        android:layout_height="64dp"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="serif"
-        android:text="RECHARGE"
-        android:textColor="@color/white"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <!--    <TextView-->
-<!--        android:id="@+id/textView6"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:text="Operator"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="25sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.51"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.393" />-->
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
-        android:layout_centerInParent="true"
-        android:text="Mobile"
-        android:textColor="@color/white"
-        android:textSize="45sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.155" />
-
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -162,7 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Airtel"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="25sp"/>
 
         <RadioButton
@@ -170,7 +163,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Jio"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="25sp"/>
 
         <RadioButton
@@ -178,7 +171,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Vodafone Idea"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="25sp"/>
 
         <RadioButton
@@ -186,19 +179,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="BSNL"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="25sp"/>
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/RmNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Mobile Number"
         android:inputType="number"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.746"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -222,7 +215,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Recharge"
-        android:background="@drawable/round_bg_white"
+        android:background="@drawable/round_bg"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.542"

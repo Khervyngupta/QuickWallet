@@ -9,18 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginPage">
-        <activity android:name="com.example.quickwallet_ui.Registeration"></activity>
-        <activity android:name="com.example.quickwallet_ui.Services" />
-        <activity android:name="com.example.quickwallet_ui.Recharge" />
-        <activity android:name="com.example.quickwallet_ui.Money_Transfer" />
-        <activity android:name="com.example.quickwallet_ui.Bill_Payments" />
-        <activity android:name="com.example.quickwallet_ui.Profile" />
-        <activity android:name="com.example.quickwallet_ui.Payments" />
-        <activity android:name="com.example.quickwallet_ui.Wallet" />
-        <activity android:name="com.example.quickwallet_ui.Dashboard" />
-        <activity android:name="com.example.quickwallet_ui.splashScreen" />
-        <activity android:name="com.example.quickwallet_ui.MainActivity" />
-        <activity android:name="com.example.quickwallet_ui.Splash">
+        <activity android:name=".ReportBug"></activity>
+        <activity android:name=".Complaint" />
+        <activity android:name=".FeedBack" />
+        <activity android:name=".Registeration" />
+        <activity android:name=".Services" />
+        <activity android:name=".Recharge" />
+        <activity android:name=".Money_Transfer" />
+        <activity android:name=".Bill_Payments" />
+        <activity android:name=".Profile" />
+        <activity android:name=".Payments" />
+        <activity android:name=".Wallet" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".splashScreen" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

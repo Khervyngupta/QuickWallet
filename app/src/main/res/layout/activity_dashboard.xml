@@ -4,25 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backg"
     tools:context=".Dashboard">
 
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
+        android:id="@+id/NameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WELCOME TO QUICK WALLET"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="45sp"
-        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintVertical_bias="0.284" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="WELCOME"
+        android:textColor="@color/black"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163" />
 
     <ImageView
         android:id="@+id/dashboard_logout"
@@ -38,11 +69,13 @@
 
     <Button
         android:id="@+id/walletbtn"
-        android:layout_width="164dp"
-        android:layout_height="140dp"
+        android:layout_width="155dp"
+        android:layout_height="120dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="Wallet"
+        android:textColor="@color/black"
+        android:background="@drawable/dashboard_btn"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,11 +86,13 @@
 
     <Button
         android:id="@+id/moneytrf"
-        android:layout_width="164dp"
-        android:layout_height="140dp"
+        android:layout_width="155dp"
+        android:layout_height="120dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="Money Transfer"
+        android:textColor="@color/black"
+        android:background="@drawable/dashboard_btn"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,11 +103,13 @@
 
     <Button
         android:id="@+id/recharge_btn"
-        android:layout_width="164dp"
-        android:layout_height="140dp"
+        android:layout_width="155dp"
+        android:layout_height="120dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="Recharge"
+        android:textColor="@color/black"
+        android:background="@drawable/dashboard_btn"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,11 +131,13 @@
 
     <Button
         android:id="@+id/bill_pay_btn"
-        android:layout_width="164dp"
-        android:layout_height="140dp"
+        android:layout_width="155dp"
+        android:layout_height="120dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="Bill Payments"
+        android:textColor="@color/black"
+        android:background="@drawable/dashboard_btn"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,11 +148,13 @@
 
     <Button
         android:id="@+id/profile_btn"
-        android:layout_width="164dp"
-        android:layout_height="140dp"
+        android:layout_width="155dp"
+        android:layout_height="120dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="Profile"
+        android:textColor="@color/black"
+        android:background="@drawable/dashboard_btn"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,7 +172,7 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="serif"
         android:text="Dashboard"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -143,11 +184,13 @@
 
     <Button
         android:id="@+id/services_btn"
-        android:layout_width="164dp"
-        android:layout_height="140dp"
+        android:layout_width="155dp"
+        android:layout_height="120dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="Service"
+        android:textColor="@color/black"
+        android:background="@drawable/dashboard_btn"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

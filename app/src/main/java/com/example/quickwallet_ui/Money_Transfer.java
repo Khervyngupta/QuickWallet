@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,10 +28,20 @@ public class Money_Transfer extends AppCompatActivity {
         transfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(num.equals("") || am.equals("") || pass.equals("")){
+                String num1=num.getText().toString().trim();
+                String am1=am.getText().toString().trim();
+                String pass1=pass.getText().toString().trim();
+
+                if(TextUtils.isEmpty(num1) || TextUtils.isEmpty(am1) || TextUtils.isEmpty(pass1)){
                     Toast.makeText(Money_Transfer.this,"Please Fill all the details.",Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(Money_Transfer.this, "Money Transfered Successfully.", Toast.LENGTH_SHORT).show();
+                }
+                else if(num1.length()<=9){
+                    Toast.makeText(Money_Transfer.this,"Please Enter correct Mobile Number.",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    int am2=Integer.parseInt(am1);
+                    MainActivity.total-=am2;
+                    Toast.makeText(Money_Transfer.this, "Money Transferred Successfully.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

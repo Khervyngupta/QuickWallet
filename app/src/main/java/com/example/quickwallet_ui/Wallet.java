@@ -15,7 +15,7 @@ public class Wallet extends AppCompatActivity implements View.OnClickListener {
 
     String amount;
      TextView tv;
-     Button pay;
+     Button pay,checkBal;
      ImageView back_btn;
      EditText edt;
      int amt;
@@ -26,6 +26,13 @@ public class Wallet extends AppCompatActivity implements View.OnClickListener {
         pay=findViewById(R.id.pay_btn);
         tv=findViewById(R.id.tv_amount);
         edt=findViewById(R.id.edt_amount);
+        checkBal=findViewById(R.id.check_bal_btn);
+        checkBal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv.setText(String.valueOf(MainActivity.total));
+            }
+        });
         back_btn=(ImageView)findViewById(R.id.wallet_back_btn);
         pay.setOnClickListener(this);
         back_btn.setOnClickListener(new View.OnClickListener() {
@@ -34,9 +41,7 @@ public class Wallet extends AppCompatActivity implements View.OnClickListener {
                 openDashboard();
             }
         });
-
     }
-
     @Override
     public void onClick(View v) {
         amount = edt.getText().toString();
@@ -46,14 +51,14 @@ public class Wallet extends AppCompatActivity implements View.OnClickListener {
             addMoney(amount);
         }
     }
-
     public void openDashboard(){
         Intent intent = new Intent(this,Dashboard.class);
         startActivity(intent);
     }
     public void addMoney(String amount){
             amt = Integer.parseInt(amount);
-            tv.setText(amount);
+            MainActivity.total+=amt;
+            tv.setText(String.valueOf(MainActivity.total));
             Toast.makeText(this, "Money added Successfully", Toast.LENGTH_SHORT).show();
     }
 }
